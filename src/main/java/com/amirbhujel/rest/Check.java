@@ -2,7 +2,7 @@ package com.amirbhujel.rest;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "check", namespace = "bharaththippireddy.com")
+@XmlRootElement(name = "check", namespace = "amirbhujel.com")
 public class Check {
 	private String checkNumber;
 	private String accountNumber;

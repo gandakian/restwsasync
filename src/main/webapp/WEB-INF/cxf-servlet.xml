@@ -6,7 +6,13 @@
 	xmlns:cxf="http://cxf.apache.org/core"
 	xsi:schemaLocation="http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://cxf.apache.org/bindings/soap http://cxf.apache.org/schemas/configuration/soap.xsd http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd  http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd">
 
-	
+	<bean id="serviceBean" class="com.amirbhujel.rest.CheckProcessorImpl" />
+
+	<jaxrs:server id="checkService" address="/checkservice">
+		<jaxrs:serviceBeans>
+			<ref bean="serviceBean" />
+		</jaxrs:serviceBeans>
+	</jaxrs:server>
 
 	<cxf:bus>
 		<cxf:features>
